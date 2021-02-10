@@ -5,38 +5,13 @@
 {% block contenidos %}
 
 </head>
-<!-- Barra -->
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
-        <a class=" navbar-brand" href="#">InterSalud</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Calendario<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="./fichamedica.html">Ficha medica</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Cerrar Sesión </a>
-                </li>
-            </ul>
-            <span class="navbar-text">
-                text
-            </span>
-        </div>
-    </nav>
-    <img src="img/logo.png" alt="">
+
+    <img src="{% static 'app1/logo.png'%}" alt="">
     </head>
 
     <body>
-
-       
-
         <!-- Encabezado calendario-->
         <h1 class="fondo-destacado">Calendario de Atenciones</h1>
         <p>Haga click en el día que le interesa, para ver la Planificación Diaria:</p>
@@ -47,8 +22,8 @@
                 <li class="prev">&#10094;</li>
                 <li class="next">&#10095;</li>
                 <li>
-                    Diciembre<br>
-                    <span style="font-size:18px">2020</span>
+                    Febrero<br>
+                    <span style="font-size:18px">2021</span>
                 </li>
             </ul>
         </div>
@@ -93,9 +68,7 @@
             <li>26</li>
             <li>27</li>
             <li>28</li>
-            <li>29</li>
-            <li>30</li>
-            <li>31</li>
+
         </ul>
 
         <!-- js "Imprimir página" -->
@@ -103,9 +76,5 @@
         <br>
         <br>
 
-
-
-
-
     </body>
-{% endblock %}
+    {% endblock %}

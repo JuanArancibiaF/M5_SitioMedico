@@ -9,7 +9,7 @@
     <div class="col xl">
       <div class="jumbotron">
 
-        <h1 class="display-4">Ficha Medica Paciente </h1>
+        <h1 class="display-4">Ficha Medica </h1>
         <p class="lead"> Valida el rut del paciente para visualizar informacion Medica </p>
         <hr class="my-4">
         <p>Ingrese su RUT</p>
@@ -54,13 +54,21 @@
               <meta charset="utf-8">
               <meta name="viewport" content="width=device-width">
               <title>JS Bin</title>
+              <style>
+
+              </style>
             </head>
 
-            <a class="btn btn-primary btn-lg" href="{% url 'app1:fichaPaciente' %}" role="button">Ficha paciente</a>
+
+            <a class="btn btn-primary btn-lg" href="{% url 'app1:fichaPaciente'%}" role="button">Ficha paciente</a>
             <div class="margen">
-              <a class="btn btn-primary btn-lg" href="{% url 'app1:calendarioHoras' %}" role="button">Calendario
-                paciente</a>
+              <a class="btn btn-primary btn-lg" href="{% url 'app1:calendario'%}" role="button">Calendario paciente</a>
             </div>
+
+
+            </html>
+
+
 
           </div>
         </nav>
