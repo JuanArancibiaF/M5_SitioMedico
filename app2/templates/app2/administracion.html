@@ -1,81 +1,47 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <title>
-        ingreso personal
-      </title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/estilos.css">
-    </head>
+{% extends "base.html" %}
 
-    <body>
-        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary"">
-            <a class="navbar-brand" href="./index.html">InterSalud</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Administración <span class="sr-only">(current)</span></a>
-                </li>
-              </ul>
-              <span class="navbar-text">
-              </span>
-            </div>
-          </nav>
-        
-        <div class="jumbotron">
-            <div class="row justify-content-between">
-                <div class="col-4">
-                                    <h1 class="display-4">Ficha Medica Empleado </h1>
-                </div >  
-                <img src="img/hospital.jpg" alt="Girl in a jacket" width="200" height="200">             
-                <img src="img/efermera.jpg" alt="Girl in a jacket" width="200" height="200"> 
-                <div class="col-4">
-                                       <!-- weather widget start --><a target="_blank" href="https://hotelmix.es/weather/santiago-2114"><img src="https://w.bookcdn.com/weather/picture/1_2114_1_4_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=60694"  alt="booked.net"/></a><!-- weather widget end -->
-                </div>              
-            </div>
-                      <p class="lead"> Valida datos del empleado</p>
-        <script>
-            var f = new Date();
-            document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-        </script>
-          <div class="text-center">
-              <hr class="my-4">
-              <p>Cargo</p>
-             <input type="Cargo">
-              <p>Nombres</p>
-             <input type="Nombres">
-              <p>Apellidos</p>
-              <input type="Apellidos">
-              
-          </div>
-          <div class="text-center">
-            <a class="btn btn-primary btn-lg" href="./index.html" role="button">Validar</a>
-          </div>
-          
-        
-        </div>  
+{% load static %}
 
-          <!-- Social media RRSS-->
-        <div class="social">
-          <header><img src="img/logo.png" width="15%" alt=""></header>
-          <p class="social-media-title"><i class="icon icon-socialmedia-title"></i> Conversemos en:</p>
-          <a href="https://www.facebook.com/ciudaddelmar"><img src="img/facebook.png" width=5% alt="facebook"></a>
-          <a href="https://www.youtube.com/user/clinicaciudaddelmar"><img src="img/youtube.png" width=5%
-                  alt="youtube"></a>
-          <a href="https://www.linkedin.com/company/cl-nica-ciudad-del-mar"><img src="img/linkedin.png" width=4%
-                  alt="linkedin"></a>
-          <a href="https://www.instagram.com/ciudaddelmar"><img src="img/instagram.png" width=4% alt="instagram"></a>
+{% block contenidos %}
+
+
+<body>
+
+  <div class="jumbotron">
+    <div class="row justify-content-between">
+      <div class="col-4">
+        <h1 class="display-4">Ficha Medica Empleado </h1>
       </div>
-       
-    </body>
-    
-    <footer>
-      <h6>Intersalud | 13 Norte 635, Viña del Mar | (032) 245 10 00 | info@ccdm.cl | </h6>
-      2020 &copy; Intersalud | Tu salud en buenas manos.
-    </footer>
+      <img src="{% static 'app2/img/hospital.jpg'%}" alt="Girl in a jacket" width="200" height="200">
+      <img src="{% static 'app2/img/efermera.jpg'%}" alt="Girl in a jacket" width="200" height="200">
+      <div class="col-4">
+        <!-- weather widget start --><a target="_blank" href="https://hotelmix.es/weather/santiago-2114"><img
+            src="https://w.bookcdn.com/weather/picture/1_2114_1_4_137AE9_160_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=582&anc_id=60694"
+            alt="booked.net" /></a><!-- weather widget end -->
+      </div>
+    </div>
+    <p class="lead"> Valida datos del empleado</p>
+    <script>
+      var f = new Date();
+      document.write(f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear());
+    </script>
+    <div class="text-center">
+      <hr class="my-4">
+      <p>Cargo</p>
+      <input type="Cargo">
+      <p>Nombres</p>
+      <input type="Nombres">
+      <p>Apellidos</p>
+      <input type="Apellidos">
 
- </html> 
+    </div>
+    <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="{% url 'app2:inicio' %}" role="button">Validar</a>
+    </div>
 
+
+  </div>
+
+</body>
+
+{% endblock %}
