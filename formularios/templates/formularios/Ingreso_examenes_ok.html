@@ -1,0 +1,11 @@
+{% block contenidos %}
+<h1> Examenes agregados OK!</h1>
+<p><a href="{% url 'formularios:ingresar_examenes' %}" > Crear Nuevo Examen</a></p>
+<h3> Listado de Examenes: </h3>
+<ul>
+    {% for examenes in lista_examenes %}
+    <li>{{examenes}}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+
+
+{% block contenidos %}
+<h1>Ingresar examenes</h1>
+
+<form action="" method="POST"> 
+    {% csrf_token %}
+    <table>
+        {{examenes.as_table}}
+    </table>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
