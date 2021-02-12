@@ -33,11 +33,12 @@ def fichaMedica(request):
 
     elif request.method == "POST":
         print("El POST contiene:", request.POST)
-
         formulario_devuelto = FormularioBusqueda(request.POST)
+        if formulario_devuelto.is_valid() == True:
+            formulario_devuelto = formulario_devuelto.cleaned_data
+            
         usuario_data = verificar_user(formulario_devuelto)
-
-        if formulario_devuelto.is_valid() == True and usuario_data != False:
+        if usuario_data != False:
             context = {'usuario': usuario_data}
             return render(request, 'app2/fichapaciente.html', context)
         elif formulario_devuelto.is_valid() == False:
@@ -58,11 +59,11 @@ def verificar_user(run_usuario):
     lista_usuarios = context_lista_pacientes()
     print(type(lista_usuarios))
     print(lista_usuarios)
-    for pacientes in lista_usuarios:
-        print('holaaaaaaaaaaaaaaaaaaaa')
-        print(pacientes)
-        if pacientes.rut == run_usuario:
-            return pacientes
+    for paciente in lista_usuarios['lista_pacientes']:
+        if paciente.get('rut') == run_usuario.get('Rut'):
+            #print("##############################")
+            #print(paciente.get('rut'))
+            return paciente
         else:
             continue
     return False
