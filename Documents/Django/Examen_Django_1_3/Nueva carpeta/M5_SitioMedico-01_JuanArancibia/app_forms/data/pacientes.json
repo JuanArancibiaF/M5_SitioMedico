@@ -1,0 +1,49 @@
+{
+    "pacientes": [
+        {
+            "rut": "19220125-k",
+            "nombre": "luciano",
+            "apellido": "sanmartin",
+            "email": "lu@gmail.com",
+            "tutor": "nadie",
+            "direccion": "callesita#790",
+            "enfermedades": "no_tiene"
+        },
+        {
+            "rut": "101443253-2",
+            "nombre": "Juan",
+            "apellido": "Arancibia",
+            "email": "Arancibia@.gmail.com",
+            "tutor": "Jonathan",
+            "direccion": "Los acacios 235",
+            "enfermedades": "Ninguna"
+        },
+        {
+            "rut": "101443253-1",
+            "nombre": "Luciano",
+            "apellido": "San Martin",
+            "email": "Luciano@gmail.com",
+            "tutor": "Nadie",
+            "direccion": "los Alerces SN",
+            "enfermedades": "Ninguna"
+        },
+        {
+            "rut": "101443253-3",
+            "nombre": "Waldo",
+            "apellido": "Cornejo",
+            "email": "Waldo@gmail.com",
+            "tutor": "Juan Arancibia",
+            "direccion": "Los Pinos 231",
+            "enfermedades": "Ninguna"
+        },
+        {
+            "rut": "101443253-4",
+            "nombre": "Luis",
+            "apellido": "Debia",
+            "email": "luis.debia@gmail.com",
+            "tutor": "Nadie",
+            "direccion": "Camilo cobos 234",
+            "enfermedades": "Ninguna"
+        }
+    ]
+}
