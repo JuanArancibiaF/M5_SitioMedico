@@ -34,12 +34,14 @@ def fichaMedica(request):
     elif request.method == "POST":
         print("El POST contiene:", request.POST)
         formulario_devuelto = FormularioBusqueda(request.POST)
+        usuario_data = False
         if formulario_devuelto.is_valid() == True:
-            formulario_devuelto = formulario_devuelto.cleaned_data
-            
-        usuario_data = verificar_user(formulario_devuelto)
+            formulario_rut = formulario_devuelto.cleaned_data
+            usuario_data = verificar_user(formulario_rut)
+
         if usuario_data != False:
-            context = {'usuario': usuario_data}
+            lista_examenes = contex_examenes_paciente()
+            context = {'usuario': usuario_data, 'lista_examenes': lista_examenes['lista_examenes']}
             return render(request, 'app2/fichapaciente.html', context)
         elif formulario_devuelto.is_valid() == False:
             formulario = FormularioBusqueda()
@@ -57,12 +59,9 @@ def fichaMedica(request):
 
 def verificar_user(run_usuario):
     lista_usuarios = context_lista_pacientes()
-    print(type(lista_usuarios))
-    print(lista_usuarios)
+
     for paciente in lista_usuarios['lista_pacientes']:
         if paciente.get('rut') == run_usuario.get('Rut'):
-            #print("##############################")
-            #print(paciente.get('rut'))
             return paciente
         else:
             continue
@@ -70,9 +69,9 @@ def verificar_user(run_usuario):
 
 
 def context_lista_pacientes():
-    filename= "/app2/data/pacientes.json"
+    filename = "/app2/data/pacientes.json"
     with open(str(settings.BASE_DIR)+filename, 'r') as file:
-        pacientes=json.load(file)
+        pacientes = json.load(file)
     context = {'lista_pacientes': pacientes['pacientes']}
     return context
 
@@ -80,4 +79,12 @@ def context_lista_pacientes():
 def lista_pacientes(request):
     context = context_lista_pacientes()
     return render(request, 'app2/fichapaciente.html', context)
+
+
+def contex_examenes_paciente():
+    filename = "/app2/data/examenes.json"
+    with open(str(settings.BASE_DIR)+filename, 'r') as file:
+        examenes = json.load(file)
+    context = {'lista_examenes' : examenes['examenes']}
+    return context
 

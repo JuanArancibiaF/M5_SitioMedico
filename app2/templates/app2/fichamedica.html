@@ -46,10 +46,12 @@
             <form action="" method="POST" novalidate>
                 {% csrf_token %}
                 <div class="row">
+                
                   <table>
                       {{formulario.as_table}}
                   </table>
                   <input type="submit" value="Buscar">
+              
                 </div>
             </form>
             <!DOCTYPE html>
