@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenidos %}
+
+
+<body>
+  <div class="center-text">
+    <div class="card text-center">
+      <div class="card-header">
+        Inicio de Sesión
+      </div>
+      <div class="card-body">
+        <div class="center">
+          <div class="text-center">
+            <img src="{% static 'app1/img/avatar2.png'%}" alt="Avatar" class="avatar" width='150px' height='100px'>
+            <h5 class="card-title">Bienvenido</h5>
+            <a class="nav-link" href="{% url 'app2:fichaMedica' %}">Iniciar Sesión</a>
+
+          </div>
+          
+
+        </div>
+
+      </div>
+
+      <div class="card-footer text-muted">
+        InterSalud
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function inicioSesion() {
+      alert("Has iniciado sesión correctamente");
+    }
+  </script>
+
+
+</body>
+{% endblock %}

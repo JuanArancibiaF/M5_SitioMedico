@@ -1,0 +1,238 @@
+/* Para versión móvil (Mobile First): */
+[class*="col-"] {
+    width: 100%;
+    padding: 3px;
+    }
+
+/* Para versión escritorio o laptop: */
+@media only screen and (min-width: 768px) {
+    .col-1 {
+    width: 100%;
+    }
+ 
+    [class*="col-"] {
+        float: left;
+    }
+
+    .row::after {
+        content: "";
+        clear: both;
+        display: flex;
+    }
+}   
+
+h1, h2, h3, h4, h5, h6, .navbar { 
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    padding: 3px;
+}
+
+#lista-guitarras > div >  h3 {
+    color: white;
+}
+
+.card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    font-weight: bold;
+}
+
+.navbar-dark {
+    background-color:black;
+}
+
+
+#base {
+    padding-top: 60px;
+    min-height: 700px;
+}
+
+
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+.month {
+    padding: 70px 25px;
+    width: 100%;
+    background: #4784df;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.month .prev {
+    float: left;
+    padding-top: 10px;
+}
+
+.month .next {
+    float: right;
+    padding-top: 10px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background: #1abc9c;
+    color: white !important
+}
+
+/* Agregamos este media queries para pantallas más pequeñas */
+@media screen and (max-width:720px) {
+
+    .weekdays li,
+    .days li {
+        width: 13.1%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .weekdays li,
+    .days li {
+         width: 12.5%;
+    }
+
+    .days li .active {
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width: 290px) {
+
+    .weekdays li,
+    .days li {
+        width: 12.2%;
+    }
+}
+
+.btnStack {
+    font-family: Oswald;
+    background-color: orange;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    }
+          
+a.btnStack:hover {
+    background-color: #000;
+}
+
+
+footer {
+    position:absolute;
+    height:100px;
+    line-height:50px;
+    background:black;
+    color:white;
+    text-align:center;
+    left:0;
+    width:100%;
+}
+          
+footer.bottom {
+    bottom:0;
+}
+        
+.footer-social-media {
+    text-align:center;
+}
+
+.social{
+    margin-top: 50px;
+    text-align:center;
+}
+
+.center-text{
+    display: flex;
+    margin-top: 50px;
+    justify-content:center;
+    align-content:center;
+}
+
+.margen{
+    margin: 25px;
+}
+
+/* Lista de Pacientes.html en app_forms */
+.h1 {
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 3px;
+}

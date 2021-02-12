@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenidos %}
+
+<body>
+  <div class="jumbotron">
+    <div class="col xl">
+      <div class="jumbotron">
+
+        <h1 class="display-4">Ficha Medica </h1>
+        <p class="lead"> Valida el rut del paciente para visualizar informacion Medica </p>
+        <hr class="my-4">
+        <p>Ingrese su RUT</p>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">InterSalud</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+
+              </li>
+              <li class="nav-item">
+
+              </li>
+              <li class="nav-item dropdown">
+
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item"></li>
+
+              </li>
+            </ul>
+            <form action="" method="POST" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                
+                  <table>
+                      {{formulario.as_table}}
+                  </table>
+                  <input type="submit" value="Buscar">
+              
+                </div>
+            </form>
+            <!DOCTYPE html>
+            <html>
+
+          
+            </div>
+
+            {% if isvalid == True %}
+            <script>
+              window.onload = function () { alert('El usuario no fue encontrado'); }
+            </script>
+            {% endif %}
+
+
+
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock %}

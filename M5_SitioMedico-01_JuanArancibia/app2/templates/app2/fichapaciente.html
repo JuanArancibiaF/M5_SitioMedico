@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenidos %}
+
+<body>
+  <div class="jumbotron">
+    <div class="col sm"> <div>
+       <div>
+
+
+
+  <div class="jumbotron">
+      <h1 class="display-4">Ficha Paciente</h1>
+      <p class="lead">Perfil de Usuario </p>
+      <hr class="my-4">
+      <p>
+          <div>
+              
+          </div>
+  <!-- Datos -->
+  
+  <ul>
+    <li><strong>Nombre:</strong> {{ usuario.nombre }}</li>
+    <li><strong>Apellido:</strong> {{ usuario.apellido }}</li>
+    <li><strong>Dirección:</strong> {{ usuario.direccion }}</li>
+    <li><strong>E-mail:</strong> {{ usuario.email }}</li>
+    <li><strong>Tutor de contacto:</strong> {{ usuario.tutor }}</li>
+    <li><strong>Enfermedades:</strong> {{ usuario.enfermedades }}</li>
+  </ul>
+  
+
+<!-- Tabla-->
+  <table class="table table-bordered">
+    
+    <colgroup>
+    
+      <colgroup span="2" style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);"></colgroup>
+      <colgroup span="2" style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);"></colgroup>
+      <colgroup span="2" style="background: rgba(110, 25, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);"></colgroup>
+      <colgroup span="2" style="background: rgba(155, 55, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);"></colgroup>
+    <thead>
+      <tr>
+        <th scope="col">Fecha</th>
+        <th scope="col">Colesterol</th>
+        <th scope="col">Triglicéridos</th>
+        <th scope="col">Orina</th>
+        <th scope="col">Glucosa</th>
+        <th scope="col">Bilirrubina</th>
+        <th scope="col">Borrar Examen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%for examen in lista_examenes%}
+      <tr>
+        <th scope="row">{{ examen.fecha }}</th>
+        <td>{{ examen.colesterol }}</td>
+        <td>{{ examen.triglicerido }}</td>
+        <td>{{ examen.orina }}</td>
+        <td>{{ examen.glucosa }}</td>
+        <td>{{ examen.bilirrubina }}</td>
+        <td>Borrar</td>
+      </tr>
+      {% endfor %}
+     
+      <br>
+      <br>
+    </tbody>
+  </table>
+
+</body>
+
+{% endblock %}
