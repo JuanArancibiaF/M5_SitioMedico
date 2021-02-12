@@ -43,30 +43,26 @@
 
               </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="RUT" aria-label="Search">
-
+            <form action="" method="POST" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                  <table>
+                      {{formulario.as_table}}
+                  </table>
+                  <input type="submit" value="Buscar">
+                </div>
             </form>
             <!DOCTYPE html>
             <html>
 
-            <head>
-              <meta charset="utf-8">
-              <meta name="viewport" content="width=device-width">
-              <title>JS Bin</title>
-              <style>
-
-              </style>
-            </head>
-
-
-            <a class="btn btn-primary btn-lg" href="{% url 'app2:fichaPaciente'%}" role="button">Ficha paciente</a>
-            <div class="margen">
-              <a class="btn btn-primary btn-lg" href="{% url 'app2:calendario'%}" role="button">Calendario paciente</a>
+          
             </div>
 
-
-            </html>
+            {% if isvalid == True %}
+            <script>
+              window.onload = function () { alert('El usuario no fue encontrado'); }
+            </script>
+            {% endif %}
 
 
 

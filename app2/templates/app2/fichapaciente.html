@@ -20,13 +20,16 @@
               
           </div>
   <!-- Datos -->
+  
   <ul>
-    <li><strong>Dirección:</strong> {{ num_books }}</li>
-    <li><strong>E-mail:</strong> {{ num_instances }}</li>
-    <li><strong>Fecha Nacimiento:</strong> {{ num_instances_available }}</li>
-    <li><strong>Tutor de contacto:</strong> {{ num_authors }}</li>
-    <li><strong>Enfermedades:</strong> {{ num_authors }}</li>
+    <li><strong>Nombre:</strong> {{ usuario.nombre }}</li>
+    <li><strong>Apellido:</strong> {{ usuario.apellido }}</li>
+    <li><strong>Dirección:</strong> {{ usuario.direccion }}</li>
+    <li><strong>E-mail:</strong> {{ usuario.email }}</li>
+    <li><strong>Tutor de contacto:</strong> {{ usuario.tutor }}</li>
+    <li><strong>Enfermedades:</strong> {{ usuario.enfermedades }}</li>
   </ul>
+  
 
 <!-- Tabla-->
   <table class="table table-bordered">
