@@ -7,7 +7,7 @@
 <body>
   <div class="jumbotron">
     <div class="col sm"> <div>
-       <div>
+      <div>
 
 
 
@@ -17,10 +17,14 @@
       <hr class="my-4">
       <p>
           <div>
-              
+            
           </div>
   <!-- Datos -->
+
+
   
+ 
+<div class = 'row'>
   <ul>
     <li><strong>Nombre:</strong> {{ usuario.nombre }}</li>
     <li><strong>Apellido:</strong> {{ usuario.apellido }}</li>
@@ -29,7 +33,60 @@
     <li><strong>Tutor de contacto:</strong> {{ usuario.tutor }}</li>
     <li><strong>Enfermedades:</strong> {{ usuario.enfermedades }}</li>
   </ul>
+
+ <!-- Inicio de grafico -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <style>
+            .chart {
+                width:50%;
+                margin : 0 auto;
+            }
+        </style>
+
+<div class="chart">
+    <canvas id="barra"></canvas>
+</div>  
+
+</body>
+<script>
+var ctx= document.getElementById("barra");
+var barra= new Chart(ctx,{
+
+
+
+    type:"line",
+    data:{
+        labels:["datos"],
+        datasets:[{
+                label:'Glucosa',
+                data:[1,2,3,4],
+                backgroundColor:[
+                    'rgb(51, 255, 62)',
+                    'rgb(51, 93, 255)',
+                    'rgb(207, 40, 52)',
+                    'rgb(116, 51, 255)',
+                    'rgb(51, 212, 255)'
+                ], 
+                fill:false
+        },]
+    },
+    options:{
+        scales:{
+            yAxes:[{
+                    ticks:{
+                        beginAtZero:true
+                    }
+            }]
+        }
+    }
+});
+</script>
+
+<!-- fin de grafico-->>
+
+
   
+</div>
 
 <!-- Tabla-->
   <table class="table table-bordered">

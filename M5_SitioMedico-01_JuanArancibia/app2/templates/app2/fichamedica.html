@@ -43,6 +43,7 @@
 
               </li>
             </ul>
+            <div class = 'column'>
             <form action="" method="POST" novalidate>
                 {% csrf_token %}
                 <div class="row">
@@ -54,10 +55,10 @@
               
                 </div>
             </form>
-            <!DOCTYPE html>
-            <html>
-
-          
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="{% url 'app_forms:ingresar_examenes' %}" role="button">Ingresar Examen</a>
+            </p>
+            </div>
             </div>
 
             {% if isvalid == True %}

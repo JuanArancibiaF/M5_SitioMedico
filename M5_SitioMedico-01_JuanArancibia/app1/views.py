@@ -20,8 +20,6 @@ def login(request):
 def fichaPaciente(request):
     return render(request, 'app1/fichapaciente.html')
 
-def fichaMedica(request):
-    return render(request, 'app1/fichamedica.html')
 
 def calendarioHoras(request):
     return render(request, 'app1/calendarioHoras.html')

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block contenidos %}
+<h1>Ingresar examenes</h1>
+<div class = 'jumbotron'>
+    <div class = 'center-text'>
+        <form action="" method="POST"> 
+            {% csrf_token %}
+            <table>
+                {{examenes.as_table}}
+            </table>
+            <input type="submit" value="Submit" onclick="verificado">
+            
+        </form>
+    </div>
+</div>
+
+<script>
+    function verificado() {
+    alert("El usuario ha sido registrado satisfactoriamente");
+    }
+</script>
+
+{% endblock %}

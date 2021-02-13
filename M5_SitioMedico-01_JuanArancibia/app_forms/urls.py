@@ -9,6 +9,6 @@ urlpatterns = [
     path('lista_pacientes/', views.lista_pacientes, name='lista_pacientes'),
     path('<rut>/eliminar_pacientes', views.eliminar_pacientes, name='eliminar_pacientes'),
     path('pacientes_creados/', views.pacientes_creados, name='pacientes_creados'),
+    path('ingresar_examenes/', views.ingresar_examenes, name='ingresar_examenes'),
 ]
 
- 

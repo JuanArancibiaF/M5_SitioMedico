@@ -2,8 +2,10 @@ import json
 
 
 from django.shortcuts import render, redirect
-from .forms import FormularioPacientes
+from .forms import FormularioPacientes, tipos_examenes
+
 from django.conf import settings
+
 
 def crear_pacientes(request):
         if request.method=="GET":
@@ -24,7 +26,7 @@ def crear_pacientes(request):
                 pacientes['pacientes'].append(datos_formulario)
             with open (str(settings.BASE_DIR)+filename, 'w') as file:
                 json.dump(pacientes, file)
-            return redirect('app_forms:lista_pacientes')
+            return redirect('app_forms:pacientes_creados')
         else:
             contex = {'formulario':formulario_devuelto}
             return render (request, 'app_forms/crear_pacientes.html', contex )
@@ -64,4 +66,28 @@ def pacientes_creados(request):
     contex = {'lista_pacientes': pacientes['pacientes']}
     return render(request, 'app_forms/pacientes_creados.html',contex)
 
-         
+def ingresar_examenes(request):
+    if request.method == "GET":
+        examenes = tipos_examenes()
+        context = {'examenes': examenes}
+        return render(request, 'app_forms/ingresar_examenes.html', context)
+
+    elif(request.method == "POST"):
+        #print("EL POST CONTIENE: ", request.POST)
+        examenes_post = tipos_examenes(request.POST) 
+        print(type(examenes_post))
+        if examenes_post.is_valid() == True:
+            data = examenes_post.cleaned_data
+            print(data)
+            data['fecha']=data['fecha'].strftime("%Y-%m-%d")
+            print("EL POST CONTIENE: ", data)
+            archivo = "/app2/data/examenes.json" 
+            with open(str(settings.BASE_DIR)+archivo,'r') as file:
+                examenes = json.load(file)
+                examenes['examenes'].append(data)
+            with open(str(settings.BASE_DIR)+archivo,'w') as file:
+                json.dump(examenes, file)
+            return redirect('app2:fichaMedica')
+        else:
+            context = {'examenes': examenes_post}
+            return render(request, 'app_forms/ingresar_examenes.html', context)         

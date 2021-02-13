@@ -1,1 +1,49 @@
-{"pacientes": [{"rut": "101443253-2", "nombre": "Juan", "apellido": "Arancibia", "email": "Arancibia@.gmail.com", "tutor": "Jonathan", "direccion": "Los acacios 235", "enfermedades": "Ninguna"}, {"rut": "101443253-1", "nombre": "Luciano", "apellido": "San Martin", "email": "Luciano@gmail.com", "tutor": "Nadie", "direccion": "los Alerces SN", "enfermedades": "Ninguna"}]}
+{
+    "pacientes": [
+        {
+            "rut": "10143253-2",
+            "nombre": "Juan",
+            "apellido": "Arancibia",
+            "email": "Arancibia@.gmail.com",
+            "tutor": "Jonathan",
+            "direccion": "Los acacios 235",
+            "enfermedades": "Ninguna"
+        },
+        {
+            "rut": "10143253-1",
+            "nombre": "Luciano",
+            "apellido": "San Martin",
+            "email": "Luciano@gmail.com",
+            "tutor": "Nadie",
+            "direccion": "los Alerces SN",
+            "enfermedades": "Ninguna"
+        },
+        {
+            "rut": "16593957-3",
+            "nombre": "Rodrigo",
+            "apellido": "Testa",
+            "email": "ro.tesga@gmail.com",
+            "tutor": "Yo",
+            "direccion": "aca",
+            "enfermedades": "nada"
+        },
+        {
+            "rut": "19220125-k",
+            "nombre": "Luciano",
+            "apellido": "asdf",
+            "email": "asda",
+            "tutor": "asdas",
+            "direccion": "asdas",
+            "enfermedades": "0"
+        },
+        {
+            "rut": "10143253-2",
+            "nombre": "Juan",
+            "apellido": "Arancibia",
+            "email": "Arancibia@gmail.com",
+            "tutor": "Jonathan",
+            "direccion": "los cacios",
+            "enfermedades": "nada"
+        }
+    ]
+}
