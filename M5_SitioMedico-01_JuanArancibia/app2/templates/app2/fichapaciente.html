@@ -12,7 +12,7 @@
 
 
   <div class="jumbotron">
-      <h1 class="display-4">Ficha Paciente</h1>
+      <h1 class="display-4">Ficha Paciente </h1>
       <p class="lead">Perfil de Usuario </p>
       <hr class="my-4">
       <p>
@@ -56,19 +56,41 @@ var barra= new Chart(ctx,{
 
     type:"line",
     data:{
-        labels:["datos"],
+        labels:{{resultados.fecha|safe}},
         datasets:[{
-                label:'Glucosa',
-                data:[1,2,3,4],
-                backgroundColor:[
-                    'rgb(51, 255, 62)',
-                    'rgb(51, 93, 255)',
-                    'rgb(207, 40, 52)',
-                    'rgb(116, 51, 255)',
-                    'rgb(51, 212, 255)'
+                label:'colesterol',
+                data:{{resultados.colesterol }},
+                borderColor:['rgba(220, 20, 220, 1)'          
                 ], 
                 fill:false
-        },]
+        },
+        {
+                label:'trigliceridos',
+                data:{{resultados.triglicerido }},
+                borderColor:['rgba(150, 150, 10, 1)'                  
+                ], 
+                fill:false
+        },
+        {
+                label:'orina',
+                data:{{resultados.orina }},
+                borderColor:['rgba(0, 80, 80, 1)'                
+                ], 
+                fill:false
+        },
+        {
+                label:'glucosa',
+                data:{{resultados.glucosa }},
+                borderColor:['rgba(40, 0, 0, 1)'                   
+                ], 
+                fill:false
+        },{
+                label:'bilirrubina',
+                data:{{resultados.bilirrubina }},
+                borderColor:['rgba(180, 50, 10, 1)'                   
+                ], 
+                fill:false
+        }]
     },
     options:{
         scales:{
@@ -85,7 +107,7 @@ var barra= new Chart(ctx,{
 <!-- fin de grafico-->>
 
 
-  
+
 </div>
 
 <!-- Tabla-->
@@ -105,11 +127,13 @@ var barra= new Chart(ctx,{
         <th scope="col">Orina</th>
         <th scope="col">Glucosa</th>
         <th scope="col">Bilirrubina</th>
-        <th scope="col">Borrar Examen</th>
       </tr>
     </thead>
     <tbody>
-      {%for examen in lista_examenes%}
+      
+
+      {% for examen in lista_examenes %}
+     
       <tr>
         <th scope="row">{{ examen.fecha }}</th>
         <td>{{ examen.colesterol }}</td>
@@ -117,7 +141,6 @@ var barra= new Chart(ctx,{
         <td>{{ examen.orina }}</td>
         <td>{{ examen.glucosa }}</td>
         <td>{{ examen.bilirrubina }}</td>
-        <td>Borrar</td>
       </tr>
       {% endfor %}
      

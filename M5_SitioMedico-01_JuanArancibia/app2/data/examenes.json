@@ -1,1 +1,40 @@
-{"examenes": [{"rut": "16593957-3", "orina": 2, "glucosa": 2, "colesterol": 2, "triglicerido": 2, "bilirrubina": 2, "fecha": "2020-12-01"}, {"rut": "12596451-1", "orina": 5, "glucosa": 5, "colesterol": 5, "triglicerido": 5, "bilirrubina": 5, "fecha": "2020-12-01"}, {"rut": "12596451-1", "orina": 5, "glucosa": 5, "colesterol": 5, "triglicerido": 5, "bilirrubina": 5, "fecha": "2020-12-01"}, {"rut": "12345789-0", "orina": 8, "glucosa": 8, "colesterol": 8, "triglicerido": 8, "bilirrubina": 7, "fecha": "2020-12-01"}, {"rut": "16.593.957-3", "orina": 123, "glucosa": 1, "colesterol": 5, "triglicerido": 5, "bilirrubina": 5, "fecha": "2020-12-01"}, {"rut": "16.593.957-3", "orina": 5, "glucosa": 5, "colesterol": 5, "triglicerido": 5, "bilirrubina": 5, "fecha": "2020-12-01"}, {"rut": "16.593.957-3", "orina": 66, "glucosa": 6, "colesterol": 6, "triglicerido": 6, "bilirrubina": 6, "fecha": "2020-12-01"}, {"rut": "16.593.957-3", "orina": 66, "glucosa": 6, "colesterol": 6, "triglicerido": 6, "bilirrubina": 6, "fecha": "2020-12-01"}, {"rut": "16.593.957-3", "orina": 66, "glucosa": 6, "colesterol": 6, "triglicerido": 6, "bilirrubina": 6, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 9, "glucosa": 9, "colesterol": 9, "triglicerido": 9, "bilirrubina": 9, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 9, "glucosa": 9, "colesterol": 9, "triglicerido": 9, "bilirrubina": 9, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 9, "glucosa": 9, "colesterol": 9, "triglicerido": 9, "bilirrubina": 9, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 9, "glucosa": 9, "colesterol": 9, "triglicerido": 9, "bilirrubina": 9, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 9, "glucosa": 9, "colesterol": 9, "triglicerido": 9, "bilirrubina": 9, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 4, "glucosa": 4, "colesterol": 4, "triglicerido": 4, "bilirrubina": 4, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 2, "glucosa": 2, "colesterol": 2, "triglicerido": 2, "bilirrubina": 2, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 7, "glucosa": 7, "colesterol": 7, "triglicerido": 7, "bilirrubina": 7, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 7, "glucosa": 7, "colesterol": 7, "triglicerido": 7, "bilirrubina": 7, "fecha": "2020-12-01"}, {"rut": "16593957-3", "orina": 7, "glucosa": 7, "colesterol": 7, "triglicerido": 7, "bilirrubina": 7, "fecha": "2020-12-01"}]}
+{
+    "examenes": [
+        {
+            "rut": {
+                "66666666-6": {
+                    "orina": 12,
+                    "glucosa": 6,
+                    "colesterol": 11,
+                    "triglicerido": 2,
+                    "bilirrubina": 21,
+                    "fecha": "2020-02-02"
+                }
+            }
+        },
+        {
+            "rut": {
+                "55555555-5": {
+                    "orina": 0,
+                    "glucosa": 15,
+                    "colesterol": 2,
+                    "triglicerido": 5,
+                    "bilirrubina": 15,
+                    "fecha": "2020-02-03"
+                }
+            }
+        },
+        {
+            "rut": {
+                "66666666-6": {
+                    "orina": 5,
+                    "glucosa": 2,
+                    "colesterol": 8,
+                    "triglicerido": 1,
+                    "bilirrubina": 0,
+                    "fecha": "2020-02-04"
+                }
+            }
+        }
+    ]
+}

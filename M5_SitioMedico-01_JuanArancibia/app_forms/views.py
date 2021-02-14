@@ -14,7 +14,7 @@ def crear_pacientes(request):
             return render(request, 'app_forms/crear_pacientes.html', contex)
 
         elif request.method=="POST":
-            print ("llego POST OK", request.POST)
+            #print ("llego POST OK", request.POST)
             
             formulario_devuelto = FormularioPacientes(request.POST)
             
@@ -74,17 +74,22 @@ def ingresar_examenes(request):
 
     elif(request.method == "POST"):
         #print("EL POST CONTIENE: ", request.POST)
+        data2 = {}
         examenes_post = tipos_examenes(request.POST) 
-        print(type(examenes_post))
+        #print(type(examenes_post))
         if examenes_post.is_valid() == True:
             data = examenes_post.cleaned_data
-            print(data)
+            #print(data)
             data['fecha']=data['fecha'].strftime("%Y-%m-%d")
-            print("EL POST CONTIENE: ", data)
+            #print("EL POST CONTIENE: ", data)
+            data2['rut'] = {data['rut']: {'orina': data['orina'],'glucosa': data['glucosa'], 
+            'colesterol': data['colesterol'], 'triglicerido': data['triglicerido'], 
+            'bilirrubina': data['bilirrubina'],'fecha': data['fecha']}}
+            #print(data2)
             archivo = "/app2/data/examenes.json" 
             with open(str(settings.BASE_DIR)+archivo,'r') as file:
                 examenes = json.load(file)
-                examenes['examenes'].append(data)
+                examenes['examenes'].append(data2)
             with open(str(settings.BASE_DIR)+archivo,'w') as file:
                 json.dump(examenes, file)
             return redirect('app2:fichaMedica')
