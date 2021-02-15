@@ -70,7 +70,7 @@ def ingresar_examenes(request):
     if request.method == "GET":
         examenes = tipos_examenes()
         context = {'examenes': examenes}
-        return render(request, 'app_forms/ingresar_examenes.html', context)
+        return render(request, 'app_forms/Ingresar_examenes.html', context)
 
     elif(request.method == "POST"):
         #print("EL POST CONTIENE: ", request.POST)
@@ -95,4 +95,4 @@ def ingresar_examenes(request):
             return redirect('app2:fichaMedica')
         else:
             context = {'examenes': examenes_post}
-            return render(request, 'app_forms/ingresar_examenes.html', context)         
+            return render(request, 'app_forms/Ingresar_examenes.html', context)         

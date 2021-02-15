@@ -13,8 +13,7 @@ def inicio(request):
 def registro(request):
     return render(request, 'app2/register.html')
 
-def login(request):
-    return render(request, 'app2/login.html')
+
 
 def calendarioHoras(request):
     return render(request, 'app2/calendarioHoras.html')

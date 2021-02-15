@@ -16,8 +16,18 @@
           <div class="text-center">
             <img src="{% static 'app1/img/avatar2.png'%}" alt="Avatar" class="avatar" width='150px' height='100px'>
             <h5 class="card-title">Bienvenido</h5>
-            <a class="nav-link" href="{% url 'app2:fichaMedica' %}">Iniciar Sesión</a>
+            <div class="colum">
+            <form action="" method="POST" novalidate>
+              {% csrf_token %}
+              
+                <table>
+                    {{formulario.as_table}}
+                </table>
+                <input class="btn btn-primary btn-lg" type="submit" value="Iniciar Sesión">
+            </form>
 
+            
+          </div>
           </div>
           
 
